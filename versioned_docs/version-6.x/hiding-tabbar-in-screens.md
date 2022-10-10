@@ -45,13 +45,16 @@ function HomeTabs() {
 
 function App() {
   return (
+  <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen name="Home" component={HomeTabs} />
       <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name="Settings" component={Settings} />
     </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 ```
 
 After re-organizing the navigation structure, now if we navigate to the `Profile` or `Settings` screens, the tab bar won't be visible over the screen anymore.
+
